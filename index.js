@@ -11,7 +11,8 @@ async function getData() {
   return data;
 }
 app.get("/", async (req, res) => {
-  res.send(await getData());
+  // res.send(await getData());
+  res.send(`<div>PORT: ${PORT}</div><div>BASEURL: ${BASEURL}</div>`);
 });
 
 app.listen(PORT, () => {
